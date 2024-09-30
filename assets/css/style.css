@@ -25,17 +25,24 @@ h2, h3, ul{
     align-items: center;
     margin:15px 0;
     padding: 20px 0;
+   
 }
 
 .main-menu li:hover{
     color: red
 }
 
-.main-menu li{
+.main-menu a{
     padding-left: 30px;
+    padding-right: 30px;
     font-weight: bold;
+    border-left: 1px solid black; 
+    color: black;
 }
 
+.main-menu li:first-child{
+    border-left: none;
+}
 
 /* Bannière */
 .banner{
@@ -46,6 +53,7 @@ h2, h3, ul{
     justify-content: center;
     align-items: center;
     padding: 9rem 0;
+    object-fit: cover;
 }
 
 h2{
@@ -121,6 +129,7 @@ h2{
 .card img{
     width: 100%;
     height: 50%;
+    object-fit: cover;
 }
 
 /* contenu - 3ème section */
@@ -134,11 +143,12 @@ h2{
 .sectionthree h3{
     font-weight: bold;
     color: white;
+
 }
 
 #email{
     border-radius: 10px;
-    padding: 10px 30px;
+    padding: 80px 30px;
 
 }
 .btnnws{
@@ -157,22 +167,58 @@ h2{
     border: 1px solid black;
 }
 
-/* Pied de page */
-.footbanner{
+/* Pied de page - conditions générales*/
+
+footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px 0; */
+    padding: 20px 0;
     font-size: smaller;
     color: white;
     background-color: black;
     text-transform:capitalize;
 }
 
-.footbanner li{
+footer img{
+    width: 70px;
+}
+
+.footbanner{
+    display: flex;
+
+}
+
+.footbanner a{
     padding-left: 30px;
+    padding-right: 10px;
+    border-left: 1px solid white; 
+    color: white;
+}
+
+.footbanner li:first-child{
+    border: none;
 }
 
 .footbanner li:hover{
     color: red;
 }
+
+@media screen and(max-width: 1100px){
+    .footbanner a{
+        font-size: ;
+}
+}
+
+@media screen and(max-width: 600px){
+    .main-menu a{
+        font-size: auto;
+        flex-direction: column;
+}
+
+    .cards{
+        font-size: auto;
+        flex-direction: column;
+}
+}
+
